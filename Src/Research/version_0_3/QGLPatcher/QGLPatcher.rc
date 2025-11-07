@@ -1,0 +1,274 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\QGLPatcher.rc2""  // 非 Microsoft Visual C++ 編輯過的資源\r\n"
+    "#include ""afxres.rc""         // 標準元件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_QGLPATCHER_DIALOG DIALOGEX 0, 0, 301, 227
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "進行遊戲",IDC_BUTTON_START,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,244,204,50,16
+    CONTROL         "官方網站",IDC_BUTTON_GOOFFICIAL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,7,50,16
+    CONTROL         "離開遊戲",IDC_BUTTON_EXIT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,181,204,50,16
+    CONTROL         "帳號註冊",IDC_BUTTON_REGISTRATION,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,125,7,50,16
+    CONTROL         "帳號管理",IDC_BUTTON_ACCOUNT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,66,7,50,16
+    CONTROL         "充值服務",IDC_BUTTON_POINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,185,7,50,16
+    CONTROL         "",IDC_EXPLORER_UPPER,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,18,
+                    45,133,148
+    CONTROL         "Server 1",IDC_BUTTON_SER1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER3,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER6,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER7,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER8,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER9,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER10,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER11,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER12,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER13,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER14,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER15,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER16,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER17,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER18,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER19,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER20,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,206,50,14
+    CONTROL         "下一頁",IDC_BUTTON_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,63,206,50,14
+    CONTROL         "上一頁",IDC_BUTTON_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,113,206,50,14
+    CONTROL         "補丁下載",IDC_BUTTON_DL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,144,206,50,14
+    CONTROL         "預設伺服器",IDC_BUTTON_CURSERVER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,27,50,14
+    COMBOBOX        IDC_COMBO_SERVERLINE,73,28,32,135,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_EXPLORER_CENTER,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,26,
+                    53,133,148
+    CONTROL         "PAGEUP",IDC_BUTTON_PAGEUP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,234,11,50,14
+    CONTROL         "PAGEDOWN",IDC_BUTTON_PAGEDOWN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,218,23,50,14
+    CONTROL         "",IDC_PROGRESS_BIG,"msctls_progress32",WS_BORDER,131,
+                    192,80,14
+    CONTROL         "",IDC_PROGRESS_SMALL,"msctls_progress32",0x0,89,192,204,
+                    6
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040403b6"
+        BEGIN
+            VALUE "CompanyName", "Gameone Online Entertainment Group Limited"
+            VALUE "FileDescription", "QGL Patcher"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "QGLPatcher.exe"
+            VALUE "LegalCopyright", "Gameone Online Entertainment Group Limited.  All rights reserved."
+            VALUE "OriginalFilename", "QGLPatcher.exe"
+            VALUE "ProductName", "QGLPatcher"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 950
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_QGLPATCHER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_QGLPATCHER_DIALOG DLGINIT
+BEGIN
+    IDC_EXPLORER_UPPER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1815, 0x0000, 0x1ac5, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    IDC_COMBO_SERVERLINE, 0x403, 5, 0
+0x6eab, 0x75bd, "\000" 
+    IDC_COMBO_SERVERLINE, 0x403, 5, 0
+0x5fa5, 0x75bd, "\000" 
+    IDC_EXPLORER_CENTER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1815, 0x0000, 0x1ac5, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res/QGL.ico"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\QGLPatcher.rc2"  // 非 Microsoft Visual C++ 編輯過的資源
+#include "afxres.rc"         // 標準元件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

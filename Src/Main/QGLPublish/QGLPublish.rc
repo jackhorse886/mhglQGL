@@ -1,0 +1,353 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\QGLPublish.rc2""  // 非 Microsoft Visual C++ 編輯過的資源\r\n"
+    "#include ""afxres.rc""         // 標準元件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\QGLPublish.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "QGL Publish Manager"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "QGL Publish Manager Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright Gameone Online Entertainment Group Limited(C) 2008",
+                    IDC_STATIC,40,25,119,23
+    DEFPUSHBUTTON   "Close",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_QGLPUBLISH_DIALOG DIALOGEX 0, 0, 453, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "QGL Publish Manager"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Execute!",IDOK,201,210,50,16
+    LTEXT           "Product:",IDC_STATIC,256,5,28,8
+    LTEXT           "Select Criteria:",IDC_STATIC,7,266,46,8
+    COMBOBOX        IDC_COMBO2,58,265,86,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Select",IDC_BUTTON2,148,263,50,14
+    LTEXT           "Source:",IDC_STATIC,7,7,25,8
+    PUSHBUTTON      "Default >",IDC_BUTTON3,201,64,50,14
+    PUSHBUTTON      "GDF Pack >",IDC_GDFPACK_TORIGHT,201,90,50,14
+    PUSHBUTTON      "GDF Pack <",IDC_IDC_GDFPACK_TOLEFT,201,104,50,14
+    PUSHBUTTON      "Direct Copy >",IDC_FILE_TORIGHT,201,131,50,14
+    PUSHBUTTON      "Direct Copy <",IDC_FILE_TOLEFT,201,146,50,14
+    CONTROL         "Custom2",IDC_GRIDCTRL_SRC,"MFCGridCtrl",WS_TABSTOP,6,20,
+                    191,240
+    CONTROL         "Custom4",IDC_GRIDCTRL_FILE,"MFCGridCtrl",WS_TABSTOP,254,
+                    165,191,112
+    CONTROL         "Custom3",IDC_GRIDCTRL_PACK,"MFCGridCtrl",WS_TABSTOP,254,
+                    43,191,111
+    EDITTEXT        IDC_SRCFOLDER,33,4,164,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "+",IDC_BUTTON8,428,27,17,14
+    PUSHBUTTON      "-",IDC_BUTTON9,407,27,17,14
+    EDITTEXT        IDC_PRODUCT_INFO,287,2,157,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Pack",IDC_STATIC,255,20,15,8
+    LTEXT           "Direct Copy",IDC_STATIC,255,156,37,8
+    COMBOBOX        IDC_LISTPACK,254,28,149,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_QGLPUBLISH_MERGER DIALOGEX 0, 0, 300, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "QGL Version Merger"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TEXT_SRC_DEST,170,29,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TEXT_DEST_DEST,170,60,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Refresh Info",IDC_REFRESH,8,175,50,14
+    DEFPUSHBUTTON   "Merge!",IDOK,189,175,50,14
+    PUSHBUTTON      "Close",IDCANCEL,243,175,50,14
+    CONTROL         "Integrate into Current version for replacement",
+                    IDC_CHECK_INTEGRATE,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,7,7,115,19
+    EDITTEXT        IDC_SRC_PATH,7,44,285,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Source Version:",IDC_STATIC,7,32,51,8
+    LTEXT           "->",IDC_STATIC,158,32,9,8
+    EDITTEXT        IDC_TEXT_SRC_SUPPORT,75,29,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_DEST_PATH,7,76,286,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Destination Version:",IDC_STATIC,7,64,65,8
+    LTEXT           "->",IDC_STATIC,157,64,9,8
+    EDITTEXT        IDC_FINAL_PATH,8,127,285,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    LTEXT           "Final Product:",IDC_STATIC,7,116,45,8
+    LTEXT           "->",IDC_STATIC,160,116,9,8
+    EDITTEXT        IDC_TEXT_FINAL_DEST,170,112,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_FINAL_DEST_REV,210,112,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Revert Product:",IDC_STATIC,7,146,52,8
+    LTEXT           "->",IDC_STATIC,160,146,9,8
+    EDITTEXT        IDC_TEXT_REVERT_SUPPORT,76,143,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_FINAL_SUPPORT,76,112,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_REVERT_DEST,170,143,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_REVERT_PATH,8,157,285,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_SRC_DEST_REV,211,29,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_DEST_DEST_REV,211,60,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_SRC_SUPPORT_REV,116,29,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_REVERT_DEST_REV,210,143,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_FINAL_SUPPORT_REV,116,112,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_TEXT_REVERT_SUPPORT_REV,116,143,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+END
+
+IDD_QGLPUBLISH_NEWVERSION DIALOGEX 0, 0, 144, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "New Version"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_MAJORVERSION,53,7,40,14,ES_AUTOHSCROLL,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_NEW_NEWREVISION,72,21,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "SVN",IDC_BUTTON_SVN,113,21,19,14
+    DEFPUSHBUTTON   "OK",IDOK,29,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,84,42,50,14
+    LTEXT           "Patch Version",IDC_STATIC,7,9,44,8
+    LTEXT           "Version Revision",IDC_STATIC,7,24,53,8
+    EDITTEXT        IDC_NEW_NEWVERSION,93,7,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_QGLPUBLISH_OPENPATCHVERSION DIALOGEX 0, 0, 117, 187
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Open Patch Version..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Open",IDOK,7,166,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,60,166,50,14
+    LISTBOX         IDC_OPEN_LIST,7,7,103,154,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_QGLPUBLISH_SETTING DIALOGEX 0, 0, 314, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Default Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Save and Close",IDC_SAVECLOSE,169,222,66,14
+    PUSHBUTTON      "Discard and Close",IDCANCEL,241,222,66,14
+    CONTROL         "Custom1",IDC_SETTINGGRIDCTRL,"MFCGridCtrl",WS_TABSTOP,2,
+                    2,310,216
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040403b6"
+        BEGIN
+            VALUE "CompanyName", "Gameone Online Entertainment Group Limited"
+            VALUE "FileDescription", "QGL Publish Manager"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "QGLPublish.exe"
+            VALUE "LegalCopyright", "Gameone Online Entertainment Group Limited(c).  All rights reserved."
+            VALUE "OriginalFilename", "QGLPublish.exe"
+            VALUE "ProductName", "QGL Publish Manager"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 950
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        ID_FILE_NEW32771
+        MENUITEM "&Open Existing Version",      ID_FILE_OPENEXISTINGVERSION
+        MENUITEM "&Close",                      ID_FILE_CLOSE32773
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_FILE_EXIT
+    END
+    POPUP "&Option"
+    BEGIN
+        MENUITEM "Default &Setting",            ID_OPTION_DEFAULTSETTING
+        MENUITEM SEPARATOR
+        MENUITEM "Show &Exclusion",             ID_OPTION_SHOWEXCLUSION
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "QGL Version &Merger",         ID_TOOLS_QGLVERSIONMERGER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Context",                    ID_HELP_CONTEXT
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_QGLPUBLISH_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 452
+    END
+
+    IDD_QGLPUBLISH_SETTING, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 174
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "關於 QGLPublish(&A)..."
+    ID_INDICATOR_STATUS     "Ready"
+    ID_INDICATOR_PROGRESS   "Progress"
+    ID_INDICATOR_PERCENT    "100%"
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\QGLPublish.rc2"  // 非 Microsoft Visual C++ 編輯過的資源
+#include "afxres.rc"         // 標準元件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

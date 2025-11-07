@@ -1,0 +1,30 @@
+Author: Alan
+Date: 2007/10/30
+
+Filename: "_tempfs.tmp"
+
+Brief Format is like that:
+<begin>Header - HashTable - BlockTable<end>
+
+Specification Format:
+Header - 44 bytes
+HashTable - 524288(=MAX of number of files) * 16 bytes
+BlockTable - (number of blocks) * 16 bytes
+
+Logic Flow:
+( Backup - to ensure that merge is revertible )
+Before merge, read GDF file
+Prepare header information, including HashTable/BlockTable offset/size in backup
+Store Header
+Copy Hash Table and Block Table from original file
+Write header that bFileCompleted=1 indicating that this backup is completed
+
+( Restore - process to revert GDF file )
+On any error found, read this file.
+Copy and Paste HashTable and BlockTable at the end of DATA part of GDF.  End of
+Data is indicated by Header part of GDF.
+Shorten the failed merged file to original size, according to GDF Header Archive
+size.
+
+( Postprocess )
+After merge or revert, delete this file.

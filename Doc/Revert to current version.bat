@@ -1,0 +1,1 @@
+del /Y CompletePatch\PatchHistory\*.*

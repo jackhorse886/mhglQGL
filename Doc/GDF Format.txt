@@ -1,0 +1,62 @@
+Author: Alan
+Date: 2008/1/14
+
+Brief Format is like that:
+<begin><Header><Data><Data>...<Data><HashTable><BlockTable><end>
+
+Specification Format:
+Header     - 44 bytes
+Data       - Sum of data size + 4 * (number of files)
+HashTable  - 524288(=MAX of number of files for master) OR 2^n(=MIN number of power of 2 containing files where n > 3 and n < 32)* 16 bytes
+BlockTable - (number of blocks[used+deleted]) * 16 bytes
+
+<Header>
+char magic[4]			= "GDF."	
+UInt32 headerSize 		= 44
+UInt32 archiveSize		file size
+UInt16 formatVersion		= 2
+UInt8 sectorSizeShift		= 1
+UInt32 hashTableOffset		hash offset
+UInt32 blockTableOffset		block offset
+UInt32 hashTableEntries		hash entries (2^n)
+UInt32 blockTableEntries	block entries
+UInt64 extendedBlockTableOffset	dummy
+UInt16 hashTableOffsetHigh	dummy
+UInt16 blockTableOffsetHigh	dummy
+
+<Data>
+UInt32 Sector			= 4 (offset of data from here)
+BYTE(length) [Data Content]	variable length
+
+<Data - "(listfile)"> - system file of file list
+UInt32 Sector			= 4 (offset of data from here)
+BYTE(length) [Data Content]	variable length
+---------------
+[Data Content]:
+===============
+FILE(1)\r\n
+FILE(2)\r\n
+...
+FILE(n-1)\r\n
+===============
+
+<HashTable>
+UInt32 filePathHashA		= filename hash A
+UInt32 filePathHashB		= hashB
+UInt16 language			dummy
+UInt8 platform			dummy
+UInt32 fileBlockIndex		pointer to block for this hash
+
+<BlockTable>
+UInt32 blockOffset		point to data offset(from file begin)
+UInt32 blockSize		block size
+UInt32 fileSize			file size
+UInt32 flags			dummy, always = 80000000h
+
+
+Logic Flow:
+Read and Store Header
+Use Header HashTable/BlockTable Offset -> Read and Store Store HashTable/BlockTable
+Use Filename HashKey -> Read HashTable
+Use HashTable block index -> Read BlockTable (in list format)
+Use BlockTable Data Offset -> Read Data

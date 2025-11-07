@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D3E1C670-0083-437A-9FD9-C4D848605BCA}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>..\..\..\OBJ\QGLPublish\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>..\..\..\OBJ\QGLPublish\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>d:\mhgl\QGL_VS2015\3rd;$(VC_IncludePath);$(WindowsSDK_IncludePath);;d:\mhgl\QGL_VS2015\version_official\Library\Reuben\Include;</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerOutput>All</AssemblerOutput>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ReubenUD.lib;MFCGridCtrlUD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\Bin\QGLPublishUD.exe</OutputFile>
+      <AdditionalLibraryDirectories>../Library/MFCGridCtrl/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../../Bin/QGLPublishUD.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>../../../Bin/QGLPublishUD.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ReubenU.lib;MFCGridCtrlU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\Bin\QGLPublishU.exe</OutputFile>
+      <AdditionalLibraryDirectories>../Library/MFCGridCtrl/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../../Bin/QGLPublishU.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>../../../Bin/QGLPublishU.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\common.cpp" />
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp" />
+    <ClCompile Include="..\QGLPatcher\Exception.cpp" />
+    <ClCompile Include="..\QGLPublish\Configure.cpp" />
+    <ClCompile Include="..\QGLPublish\ConfigureFilelist.cpp" />
+    <ClCompile Include="..\QGLPublish\ConfigureRevertlist.cpp" />
+    <ClCompile Include="..\QGLPublish\ConfigureSummary.cpp" />
+    <ClCompile Include="..\QGLPublish\ConfigureSVN.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLMerger.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLNewPatchDlg.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLOpenPatchDlg.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLPublish.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLPublishDlg.cpp" />
+    <ClCompile Include="..\QGLPublish\QGLSettingDlg.cpp" />
+    <ClCompile Include="..\QGLPublish\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\common.h" />
+    <ClInclude Include="..\Common\Exception.h" />
+    <ClInclude Include="..\GDFPackager\CFindFile.h" />
+    <ClInclude Include="..\GDFPackager\GDFFile.h" />
+    <ClInclude Include="..\GDFPackager\GDFManager.h" />
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h" />
+    <ClInclude Include="..\GDFPackager\GDFStream.h" />
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\CellRange.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCell.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellBase.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCheck.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCombo.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellDateTime.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFile.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFileDialog.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellNumeric.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCtrl.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridDropTarget.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridURLCell.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\MemDC.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\stdafx.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\TitleTip.h" />
+    <ClInclude Include="..\QGLPublish\Configure.h" />
+    <ClInclude Include="..\QGLPublish\ConfigureFilelist.h" />
+    <ClInclude Include="..\QGLPublish\ConfigureRevertlist.h" />
+    <ClInclude Include="..\QGLPublish\ConfigureSummary.h" />
+    <ClInclude Include="..\QGLPublish\ConfigureSVN.h" />
+    <ClInclude Include="..\QGLPublish\QGLMerger.h" />
+    <ClInclude Include="..\QGLPublish\QGLNewPatchDlg.h" />
+    <ClInclude Include="..\QGLPublish\QGLOpenPatchDlg.h" />
+    <ClInclude Include="..\QGLPublish\QGLPublish.h" />
+    <ClInclude Include="..\QGLPublish\QGLPublishDlg.h" />
+    <ClInclude Include="..\QGLPublish\QGLSettingDlg.h" />
+    <ClInclude Include="..\QGLPublish\Resource.h" />
+    <ClInclude Include="..\QGLPublish\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\QGLPublish\res\QGLPublish.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\QGLPublish\QGLPublish.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\QGLPublish\res\QGLPublish.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\QGLPublish\res\QGLPublish.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\QGLPublish\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="..\QGLPublish\QGLPublish.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

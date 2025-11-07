@@ -1,0 +1,39 @@
+Author: Alan
+Date: 2008/11/10
+
+Filename: "TraceVersion.GDX"
+
+Description: Trace the version change across time
+
+Brief Format is like that:
+<begin>Header - To-from-Table<end>
+
+Specification Format:
+Header - 20 bytes
+To-from-Table - 8 bytes * num_version_changes
+
+Header:
+4B .GDX
+4B version
+4B To-From-Table offset
+4B num_records
+4B CRC_body
+
+To-From_Table (body):
+4B source_version
+4B target_version
+
+Logic Flow:
+[append]
+1. Append new record at the end;
+2. CRC the record body;
+3. Rewrite num_records, CRC.
+
+[revert to do]
+1. CRC body;
+2. read last 8B.
+
+[revert done]
+1. CRC body (-8B)
+2. set length - 8B
+3. Rewrite num_records, CRC.

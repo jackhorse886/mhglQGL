@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="HoverButton">
+      <UniqueIdentifier>{54cdf352-1856-4f36-a904-1f835935bcc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InternetSession">
+      <UniqueIdentifier>{da234936-d529-4e8c-b0ec-6eaf462766c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameStringTable">
+      <UniqueIdentifier>{ba62970b-629f-4691-99de-99aed8e0c082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CSV_Text">
+      <UniqueIdentifier>{082cae7a-9bf9-4acf-b018-4b40f43e822c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFPackager">
+      <UniqueIdentifier>{fd3fef7a-a192-4395-b45e-4ea9d805eada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{3df8a630-60d5-402e-9dcc-cc57f0297121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{2b1a6568-8fae-4c22-94f2-499e89aef3cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SelectionList">
+      <UniqueIdentifier>{89317df0-723e-4615-8666-2a4bb9127ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configure">
+      <UniqueIdentifier>{c02ef446-fbab-48d5-8598-546a21490ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UIManager">
+      <UniqueIdentifier>{7e481daa-efa0-4851-958b-6c6018b7ed2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProgressMonitor">
+      <UniqueIdentifier>{7b66a941-87e5-43ad-a548-83f7750e0456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{089699a5-986d-4447-866d-aef4db9fced9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\explorer_upper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\QGLPatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\QGLPatcherDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\HoverButton.cpp">
+      <Filter>HoverButton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\InternetSessionEx.cpp">
+      <Filter>InternetSession</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\GameStringTable.cpp">
+      <Filter>GameStringTable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\QGLCSVTReader.cpp">
+      <Filter>GameStringTable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\UTF8File.cpp">
+      <Filter>GameStringTable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackager.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp">
+      <Filter>GDFPackager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Misc\Stackwalker.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\FTPClient.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\HTTPClient.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\NetworkGlobal.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\SelectionList.cpp">
+      <Filter>SelectionList</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\Configure.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\ConfigureApp.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\ConfigureServerList.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\ConfigureVersion.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\ConfigureZoneList.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GDXFile.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\UIManagerRecommList.cpp">
+      <Filter>UIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\UIManagerServerList.cpp">
+      <Filter>UIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\UIManagerZoneList.cpp">
+      <Filter>UIManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\ProgressMonitor.cpp">
+      <Filter>ProgressMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\InitTrackerDialog.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\explorer_upper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\MemDC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\QGLPatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\QGLPatcherDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\HoverButton.h">
+      <Filter>HoverButton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\InternetSessionEx.h">
+      <Filter>InternetSession</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\GameStringTable.h">
+      <Filter>GameStringTable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\QGLCSVTReader.h">
+      <Filter>GameStringTable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\UTF8File.h">
+      <Filter>GameStringTable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\CFindFile.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFcommon.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFFile.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFManager.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStream.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h">
+      <Filter>GDFPackager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Misc\Stackwalker.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\FTPClient.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\HTTPClient.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\NetworkGlobal.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\SelectionList.h">
+      <Filter>SelectionList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\Configure.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\ConfigureApp.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\ConfigureServerList.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\ConfigureVersion.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\ConfigureZoneList.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GDXFile.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\UIManagerRecommList.h">
+      <Filter>UIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\UIManagerServerList.h">
+      <Filter>UIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\UIManagerZoneList.h">
+      <Filter>UIManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\ProgressMonitor.h">
+      <Filter>ProgressMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPatcher\InitTrackerDialog.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\QGLPatcher\res\QGL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\QGLPatcher\QGL.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\QGLPatcher\res\QGLPatcher.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\QGLPatcher\QGLPatcher.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\QGLPatcher\res\QGLPatcher.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\QGLPatcher\CSV\localization.csv">
+      <Filter>CSV_Text</Filter>
+    </None>
+  </ItemGroup>
+</Project>

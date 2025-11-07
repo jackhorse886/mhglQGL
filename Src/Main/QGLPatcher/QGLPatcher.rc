@@ -1,0 +1,391 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\QGLPatcher.rc2""  // 非 Microsoft Visual C++ 編輯過的資源\r\n"
+    "#include ""afxres.rc""         // 標準元件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_QGLPATCHER_DIALOG DIALOGEX 0, 0, 421, 302
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "進行遊戲",IDC_BUTTON_START,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,364,279,50,16
+    CONTROL         "GO1",IDC_BUTTON_GO1,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    7,7,50,16
+    CONTROL         "離開遊戲",IDC_BUTTON_EXIT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,181,279,50,16
+    CONTROL         "GO3",IDC_BUTTON_GO3,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    125,7,50,16
+    CONTROL         "GO2",IDC_BUTTON_GO2,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    66,7,50,16
+    CONTROL         "GO4",IDC_BUTTON_GO4,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    185,7,50,16
+    CONTROL         "",IDC_EXPLORER_UPPER,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,18,
+                    45,133,148
+    CONTROL         "Server 1",IDC_BUTTON_SER1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER3,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER6,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER7,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER8,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER9,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER10,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER11,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER12,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER13,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER14,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER15,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER16,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER17,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER18,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER19,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER20,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,7,281,50,14
+    CONTROL         "下一頁",IDC_BUTTON_NEXT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,63,281,50,14
+    CONTROL         "上一頁",IDC_BUTTON_PREV,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,113,281,50,14
+    CONTROL         "補丁下載",IDC_BUTTON_DL,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,144,281,50,14
+    CONTROL         "預設伺服器",IDC_BUTTON_CURSERVER,"Button",BS_OWNERDRAW | 
+                    NOT WS_VISIBLE | WS_TABSTOP,7,27,50,14
+    COMBOBOX        IDC_COMBO_SERVERLINE,73,28,32,135,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_EXPLORER_CENTER,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,26,
+                    53,133,148
+    CONTROL         "PAGEUP",IDC_BUTTON_PAGEUP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,234,11,50,14
+    CONTROL         "PAGEDOWN",IDC_BUTTON_PAGEDOWN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,218,23,50,14
+    CONTROL         "",IDC_PROGRESS_BIG,"msctls_progress32",WS_BORDER,131,
+                    192,80,14
+    CONTROL         "",IDC_PROGRESS_SMALL,"msctls_progress32",0x0,89,192,204,
+                    6
+    CONTROL         "GO5",IDC_BUTTON_GO5,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    288,7,50,14
+    CONTROL         "GO6",IDC_BUTTON_GO6,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    343,7,50,14
+    CONTROL         "Server 1",IDC_BUTTON_SER21,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER22,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER23,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER24,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER25,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER26,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER27,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER28,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER29,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER30,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER31,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER32,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER33,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER34,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER35,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER36,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER37,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER38,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER39,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER40,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,232,106,50,14
+    CONTROL         "Server 1",IDC_BUTTON_SER41,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER42,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER43,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER44,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER45,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER46,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER47,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER48,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER49,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER50,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER51,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER52,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER53,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER54,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER55,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER56,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER57,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER58,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER59,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "Server 2",IDC_BUTTON_SER60,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,262,153,50,14
+    CONTROL         "ZPAGEUP",IDC_BUTTON_ZPAGEUP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,242,19,50,14
+    CONTROL         "ZPAGEDOWN",IDC_BUTTON_ZPAGEDOWN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,226,31,50,14
+    CONTROL         "進行遊戲patch",IDC_BUTTON_PATCHSTART,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,350,256,50,16
+    CONTROL         "",IDC_EXPLORER_RIGHT,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,33,
+                    60,133,148
+END
+
+IDD_DIALOG_INIT DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040403b6"
+        BEGIN
+            VALUE "CompanyName", "Gameone Online Entertainment Group Limited"
+            VALUE "FileDescription", "QGL Patcher"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "QGLPatcher.exe"
+            VALUE "LegalCopyright", "Gameone Online Entertainment Group Limited.  All rights reserved."
+            VALUE "OriginalFilename", "QGLPatcher.exe"
+            VALUE "ProductName", "QGLPatcher"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 950
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_QGLPATCHER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 414
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DIALOG_INIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_QGLPATCHER_DIALOG DLGINIT
+BEGIN
+    IDC_EXPLORER_UPPER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1815, 0x0000, 0x1ac5, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    IDC_COMBO_SERVERLINE, 0x403, 5, 0
+0x6eab, 0x75bd, "\000" 
+    IDC_COMBO_SERVERLINE, 0x403, 5, 0
+0x5fa5, 0x75bd, "\000" 
+    IDC_EXPLORER_CENTER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1815, 0x0000, 0x1ac5, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    IDC_EXPLORER_RIGHT, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x1815, 0x0000, 0x1ac5, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res/QGL.ico"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\QGLPatcher.rc2"  // 非 Microsoft Visual C++ 編輯過的資源
+#include "afxres.rc"         // 標準元件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,43 @@
+*************************************************************************************
+    PATCH PROCEDURE (By using GDFPackager & NSIS)
+*************************************************************************************
+
+To produce a patch:
+
+(For AUTO/MANUAL PATCH)
+<File Packager>
+1. Copy all client files to QGLData\CompletePatch;
+
+2. Run "PATCH.bat <version>" to patch _Data.gdf.patch file;
+   The following steps are carried out by PATCH.bat:
+   a) _Data.gdf.patch      moved  to PackagingEnv\Single\<version>;
+   b) QGLPatchTemplate.nsi copied to PackagingEnv\Single\<version>;
+   c) UpdatePatchU.exe     copied to PackagingEnv\Single\<version>;
+   d) per-build.bat        copied to PackagingEnv\Single\<version>;
+   e) PatchHistory(folder) copied to PackagingEnv\Single\<version>, for store use only.
+   For example:
+   PATCH 6 ---> it means that destination of this patch is 6
+   P.S.  ! patchstep version not fully compatible
+
+<NSIS Packager>
+3. Execute PackagingEnv\Single\<version>\per-build.bat, then QGLPatch.nsi is generated;
+
+4. Collect the following information:
+   * Which version applies this patch
+   * To which version this patch is converting the game
+   Change versions number for commented PRODUCT_SUPPORT_FROM_VERSION, PRODUCT_SUPPORT_TO_VERSION.  Uncomment them;
+
+5. Move other update files to PackagingEnv\Single\<version>, e.g. QGLPU.exe, QGLPatcherU.exe, res\*.BMP, *.DLL, Data\*.WAV, etc.;
+
+6. Right-click and click on "Compile NSIS Script";
+   It compresses the file and puts it in UpdatePatch\ folder;
+
+7. Upload it to WEBSITE;
+
+(For AUTO PATCH)
+8. Run MakePatchFilelistU.exe on WEBSITE folder.
+   It generates Filelist.txt containing CRC information;
+
+9. Change summary.txt;
+
+10. Upload Filelist.txt and summary.txt to WEBSITE

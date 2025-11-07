@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="FindFile">
+      <UniqueIdentifier>{0d244eb7-5082-4e70-9ac3-2933d3c29a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{dab9e752-cf7b-4c67-aa71-bdd56e287335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFManager">
+      <UniqueIdentifier>{33ec3700-536e-4dbd-be5d-da5f575ffe12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFPackageMaker">
+      <UniqueIdentifier>{c5b592f8-789d-4203-8689-b7fe8ebf5b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFStream">
+      <UniqueIdentifier>{05f715fb-7d0e-40a0-b325-a160131ee523}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\GDFPackager\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp">
+      <Filter>FindFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp">
+      <Filter>GDFManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp">
+      <Filter>GDFManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp">
+      <Filter>GDFPackageMaker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp">
+      <Filter>GDFStream</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Exception.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\resource.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\CFindFile.h">
+      <Filter>FindFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFcommon.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFFile.h">
+      <Filter>GDFManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFManager.h">
+      <Filter>GDFManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h">
+      <Filter>GDFPackageMaker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStream.h">
+      <Filter>GDFStream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h">
+      <Filter>GDFStream</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

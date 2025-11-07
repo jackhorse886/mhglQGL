@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{240c1c33-a0f6-4650-8486-c24a5c4816e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d9840dd2-f86d-4411-975f-c0bb5b98dd06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GridCell">
+      <UniqueIdentifier>{2f929f8c-6e53-4837-9b5f-eeadc273faa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFManager">
+      <UniqueIdentifier>{20d18a2d-add2-4ad9-9248-480b3f712859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFPackageMaker">
+      <UniqueIdentifier>{2cdf961d-36cf-44a4-92e7-256e0e53f4d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDFStream">
+      <UniqueIdentifier>{fd8ab296-6e67-40f4-952f-8ee3a647425c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FindFile">
+      <UniqueIdentifier>{38eace38-003d-464c-bce3-c7dafa90fa6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configure">
+      <UniqueIdentifier>{e4f79397-c6b8-401d-8a1a-f04eed064c1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\QGLPublish\QGLPublish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\QGLPublishDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\QGLMerger.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\QGLNewPatchDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\QGLOpenPatchDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\QGLSettingDlg.cpp">
+      <Filter>Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPatcher\Exception.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\stdafx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp">
+      <Filter>GDFManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp">
+      <Filter>GDFManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp">
+      <Filter>GDFPackageMaker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp">
+      <Filter>GDFStream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp">
+      <Filter>FindFile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\Configure.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\ConfigureFilelist.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\ConfigureRevertlist.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\ConfigureSummary.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QGLPublish\ConfigureSVN.cpp">
+      <Filter>Configure</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\QGLPublish\QGLPublish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\QGLPublishDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\QGLMerger.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\QGLNewPatchDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\QGLOpenPatchDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\QGLSettingDlg.h">
+      <Filter>Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Exception.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\stdafx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\CellRange.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCell.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellBase.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCheck.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCombo.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellDateTime.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFile.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFileDialog.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellNumeric.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCtrl.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridDropTarget.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridURLCell.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\InPlaceEdit.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\MemDC.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\stdafx.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\TitleTip.h">
+      <Filter>GridCell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFFile.h">
+      <Filter>GDFManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFManager.h">
+      <Filter>GDFManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h">
+      <Filter>GDFPackageMaker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStream.h">
+      <Filter>GDFStream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h">
+      <Filter>GDFStream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\CFindFile.h">
+      <Filter>FindFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\Configure.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\ConfigureFilelist.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\ConfigureRevertlist.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\ConfigureSummary.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QGLPublish\ConfigureSVN.h">
+      <Filter>Configure</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\QGLPublish\res\QGLPublish.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\QGLPublish\QGLPublish.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\QGLPublish\res\QGLPublish.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\QGLPublish\res\QGLPublish.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\QGLPublish\ReadMe.txt" />
+  </ItemGroup>
+</Project>

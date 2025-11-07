@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{63afecfb-ea3b-484c-82ef-0f0b3887a031}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\GDFMerger\GDFMerger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFMerger\GDFMergerDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFMerger\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\common.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFMerger\Exception.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GDFMerger\Merger.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\GDFMerger\GDFMerger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFMerger\GDFMergerDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFMerger\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFMerger\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\CFindFile.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\common.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Exception.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFcommon.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFFile.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFManager.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStream.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GDFMerger\Merger.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\GDFMerger\res\GDFMerger.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\GDFMerger\GDFMerger.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\GDFMerger\res\GDFMerger.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

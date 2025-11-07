@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EA7FBBA6-BEBA-46B8-97C7-3101BD3616F3}</ProjectGuid>
+    <RootNamespace>QGLPatcher</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>..\..\..\OBJ\QGLPatcher\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>..\..\..\OBJ\QGLPatcher\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../QGLPatcher;../Common;..;d:/mhgl/QGL_VS2015/version_official/Library/Reuben/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;UNICODE;_UNICODE;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AssemblerOutput>All</AssemblerOutput>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ReubenUD.lib;Wininet.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\Bin\QGLPatcherUD.exe</OutputFile>
+      <AdditionalLibraryDirectories>../QGLPatcher/zlib;../../../../Library/curl-7.18.2/lib/Debug;d:\mhgl\QGL_VS2015\version_official\Library\Reuben\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../../Bin/QGLPatcherUD.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>../../../Bin/QGLPatcherUD.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>CopyResToPatcher.bat</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../QGLPatcher;../Common;..;d:/mhgl/QGL_VS2015/version_official/Library/Reuben/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AssemblerOutput>All</AssemblerOutput>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;ReubenU.lib;Wininet.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\..\Bin\QGLPatcherU.exe</OutputFile>
+      <AdditionalLibraryDirectories>../QGLPatcher/zlib;../../../../Library/curl-7.18.2/lib/Release;d:\mhgl\QGL_VS2015\version_official\Library\Reuben\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>../../../Bin/QGLPatcherU.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>../../../Bin/QGLPatcherU.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>CopyResToPatcher.bat</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\common.cpp" />
+    <ClCompile Include="..\Common\GDXFile.cpp" />
+    <ClCompile Include="..\GDFPackager\CFindFile.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFFile.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFManager.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFPackager.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFStream.cpp" />
+    <ClCompile Include="..\Misc\Stackwalker.cpp" />
+    <ClCompile Include="..\QGLPatcher\Configure.cpp" />
+    <ClCompile Include="..\QGLPatcher\ConfigureApp.cpp" />
+    <ClCompile Include="..\QGLPatcher\ConfigureServerList.cpp" />
+    <ClCompile Include="..\QGLPatcher\ConfigureVersion.cpp" />
+    <ClCompile Include="..\QGLPatcher\ConfigureZoneList.cpp" />
+    <ClCompile Include="..\QGLPatcher\Exception.cpp" />
+    <ClCompile Include="..\QGLPatcher\explorer_upper.cpp" />
+    <ClCompile Include="..\QGLPatcher\FTPClient.cpp" />
+    <ClCompile Include="..\QGLPatcher\GameStringTable.cpp" />
+    <ClCompile Include="..\QGLPatcher\HoverButton.cpp" />
+    <ClCompile Include="..\QGLPatcher\HTTPClient.cpp" />
+    <ClCompile Include="..\QGLPatcher\InitTrackerDialog.cpp" />
+    <ClCompile Include="..\QGLPatcher\InternetSessionEx.cpp" />
+    <ClCompile Include="..\QGLPatcher\NetworkGlobal.cpp" />
+    <ClCompile Include="..\QGLPatcher\ProgressMonitor.cpp" />
+    <ClCompile Include="..\QGLPatcher\QGLCSVTReader.cpp" />
+    <ClCompile Include="..\QGLPatcher\QGLPatcher.cpp" />
+    <ClCompile Include="..\QGLPatcher\QGLPatcherDlg.cpp" />
+    <ClCompile Include="..\QGLPatcher\SelectionList.cpp" />
+    <ClCompile Include="..\QGLPatcher\UIManagerRecommList.cpp" />
+    <ClCompile Include="..\QGLPatcher\UIManagerServerList.cpp" />
+    <ClCompile Include="..\QGLPatcher\UIManagerZoneList.cpp" />
+    <ClCompile Include="..\QGLPatcher\UTF8File.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\common.h" />
+    <ClInclude Include="..\Common\Exception.h" />
+    <ClInclude Include="..\Common\GDXFile.h" />
+    <ClInclude Include="..\GDFPackager\CFindFile.h" />
+    <ClInclude Include="..\GDFPackager\GDFcommon.h" />
+    <ClInclude Include="..\GDFPackager\GDFFile.h" />
+    <ClInclude Include="..\GDFPackager\GDFManager.h" />
+    <ClInclude Include="..\GDFPackager\GDFPackageMaker.h" />
+    <ClInclude Include="..\GDFPackager\GDFStream.h" />
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h" />
+    <ClInclude Include="..\Misc\Stackwalker.h" />
+    <ClInclude Include="..\QGLPatcher\Configure.h" />
+    <ClInclude Include="..\QGLPatcher\ConfigureApp.h" />
+    <ClInclude Include="..\QGLPatcher\ConfigureServerList.h" />
+    <ClInclude Include="..\QGLPatcher\ConfigureVersion.h" />
+    <ClInclude Include="..\QGLPatcher\ConfigureZoneList.h" />
+    <ClInclude Include="..\QGLPatcher\explorer_upper.h" />
+    <ClInclude Include="..\QGLPatcher\FTPClient.h" />
+    <ClInclude Include="..\QGLPatcher\GameStringTable.h" />
+    <ClInclude Include="..\QGLPatcher\HoverButton.h" />
+    <ClInclude Include="..\QGLPatcher\HTTPClient.h" />
+    <ClInclude Include="..\QGLPatcher\InitTrackerDialog.h" />
+    <ClInclude Include="..\QGLPatcher\InternetSessionEx.h" />
+    <ClInclude Include="..\QGLPatcher\MemDC.h" />
+    <ClInclude Include="..\QGLPatcher\NetworkGlobal.h" />
+    <ClInclude Include="..\QGLPatcher\ProgressMonitor.h" />
+    <ClInclude Include="..\QGLPatcher\QGLCSVTReader.h" />
+    <ClInclude Include="..\QGLPatcher\QGLPatcher.h" />
+    <ClInclude Include="..\QGLPatcher\QGLPatcherDlg.h" />
+    <ClInclude Include="..\QGLPatcher\Resource.h" />
+    <ClInclude Include="..\QGLPatcher\SelectionList.h" />
+    <ClInclude Include="..\QGLPatcher\UIManagerRecommList.h" />
+    <ClInclude Include="..\QGLPatcher\UIManagerServerList.h" />
+    <ClInclude Include="..\QGLPatcher\UIManagerZoneList.h" />
+    <ClInclude Include="..\QGLPatcher\UTF8File.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\QGLPatcher\QGL.ico" />
+    <Image Include="..\QGLPatcher\res\QGL.ico" />
+    <Image Include="..\QGLPatcher\res\QGLPatcher.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\QGLPatcher\QGLPatcher.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\QGLPatcher\CSV\localization.csv" />
+    <None Include="..\QGLPatcher\res\QGLPatcher.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties _x007B_8856F961-340A-11D0-A96B-00C04FD705A2_x007D_="CExplorer_upper" RESOURCE_FILE="..\QGLPatcher\QGLPatcher.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,24 @@
+# Visual Studio 临时文件
+*.ipch
+*.sdf
+*.VC.db
+*.opendb
+*.user
+*.log
+*.tlog
+*.idb
+*.pdb
+*.ilk
+
+# 构建输出
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+bin/
+obj/
+
+# 其他临时目录
+/.vs/
+Project/ipch/
