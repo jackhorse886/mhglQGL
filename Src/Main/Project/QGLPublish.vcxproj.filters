@@ -14,28 +14,28 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="Dialog">
-      <UniqueIdentifier>{240c1c33-a0f6-4650-8486-c24a5c4816e5}</UniqueIdentifier>
+      <UniqueIdentifier>{2672be28-cc93-4287-81f7-8b68327d6adc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common">
-      <UniqueIdentifier>{d9840dd2-f86d-4411-975f-c0bb5b98dd06}</UniqueIdentifier>
+      <UniqueIdentifier>{7524e262-7451-4ae9-82f3-7f6f7a3f319d}</UniqueIdentifier>
     </Filter>
     <Filter Include="GridCell">
-      <UniqueIdentifier>{2f929f8c-6e53-4837-9b5f-eeadc273faa9}</UniqueIdentifier>
+      <UniqueIdentifier>{e98d52ff-5d24-4fdd-998c-8ef95eef1b9e}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFManager">
-      <UniqueIdentifier>{20d18a2d-add2-4ad9-9248-480b3f712859}</UniqueIdentifier>
+      <UniqueIdentifier>{587fe873-dd00-44d7-9186-dab5ab6b88dc}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFPackageMaker">
-      <UniqueIdentifier>{2cdf961d-36cf-44a4-92e7-256e0e53f4d2}</UniqueIdentifier>
+      <UniqueIdentifier>{13b00eb0-3cf8-454d-a1df-c5496d363b97}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFStream">
-      <UniqueIdentifier>{fd8ab296-6e67-40f4-952f-8ee3a647425c}</UniqueIdentifier>
+      <UniqueIdentifier>{41763463-f793-4113-8a4f-44ae3dd4a0a1}</UniqueIdentifier>
     </Filter>
     <Filter Include="FindFile">
-      <UniqueIdentifier>{38eace38-003d-464c-bce3-c7dafa90fa6a}</UniqueIdentifier>
+      <UniqueIdentifier>{8d7767aa-ac2a-496a-8fc5-1cf39851214d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Configure">
-      <UniqueIdentifier>{e4f79397-c6b8-401d-8a1a-f04eed064c1e}</UniqueIdentifier>
+      <UniqueIdentifier>{34bc1898-a926-467e-bd0f-1edf1081ba98}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

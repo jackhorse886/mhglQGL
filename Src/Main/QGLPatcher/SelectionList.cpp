@@ -46,11 +46,13 @@ UInt32 CSelectionList::Get()
 	// erase the output address from temp vectors
 	UInt32 counter;
 	counter = 0;
-	for( UInt32Vector::iterator itr = m_tempValue.begin(); counter < foundIdx; ++itr, ++counter );
+	UInt32Vector::iterator itr = m_tempValue.begin();
+	for( ; counter < foundIdx; ++itr, ++counter );
 	m_tempValue.erase(itr);
 	counter = 0;
-	for( UInt32Vector::iterator itr = m_tempWeigh.begin(); counter < foundIdx; ++itr, ++counter );
-	m_tempWeigh.erase(itr);
+	UInt32Vector::iterator itr2 = m_tempWeigh.begin();
+	for( ; counter < foundIdx; ++itr2, ++counter );
+	m_tempWeigh.erase(itr2);
 
 	return outputValue;
 }

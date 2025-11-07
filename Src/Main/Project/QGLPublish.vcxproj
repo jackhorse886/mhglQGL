@@ -19,13 +19,13 @@
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -49,14 +49,13 @@
     <OutDir>Release\</OutDir>
     <IntDir>..\..\..\OBJ\QGLPublish\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>d:\mhgl\QGL_VS2015\3rd;$(VC_IncludePath);$(WindowsSDK_IncludePath);;d:\mhgl\QGL_VS2015\version_official\Library\Reuben\Include;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EHa /FS %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;../../../../version_official/Library/Reuben/Include;../../../../3rd;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;UNICODE;_UNICODE;REUBEN_LIB;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <ExceptionHandling />
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -69,9 +68,9 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;ReubenUD.lib;MFCGridCtrlUD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;ReubenUD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\..\Bin\QGLPublishUD.exe</OutputFile>
-      <AdditionalLibraryDirectories>../Library/MFCGridCtrl/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>../../../Bin/QGLPublishUD.pdb</ProgramDatabaseFile>
       <GenerateMapFile>true</GenerateMapFile>
@@ -93,9 +92,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalOptions>/EHa %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/EHa /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>../QGLPublish;../Common;..;../Library/MFCGridCtrl;../GDFPackager;../../../../version_official/Library/Reuben/Include;../../../../3rd;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;REUBEN_LIB;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling />
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -104,15 +104,9 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;ReubenU.lib;MFCGridCtrlU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;ReubenPU.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\..\Bin\QGLPublishU.exe</OutputFile>
-      <AdditionalLibraryDirectories>../Library/MFCGridCtrl/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>../../../Bin/QGLPublishU.pdb</ProgramDatabaseFile>
-      <GenerateMapFile>true</GenerateMapFile>
-      <MapFileName>../../../Bin/QGLPublishU.map</MapFileName>
-      <MapExports>true</MapExports>
-      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;../../../Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
@@ -147,6 +141,19 @@
     <ClCompile Include="..\QGLPublish\QGLPublish.cpp" />
     <ClCompile Include="..\QGLPublish\QGLPublishDlg.cpp" />
     <ClCompile Include="..\QGLPublish\QGLSettingDlg.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCell.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCheck.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCombo.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellDateTime.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFile.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFileDialog.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellNumeric.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridURLCell.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\TitleTip.cpp" />
     <ClCompile Include="..\QGLPublish\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -205,6 +212,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\QGLPublish\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

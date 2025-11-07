@@ -14,7 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="Application">
-      <UniqueIdentifier>{63afecfb-ea3b-484c-82ef-0f0b3887a031}</UniqueIdentifier>
+      <UniqueIdentifier>{d56bada0-10e8-4ebc-99ac-c9d033fbe12a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

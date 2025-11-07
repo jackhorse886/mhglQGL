@@ -14,10 +14,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="FindFile">
-      <UniqueIdentifier>{487892a4-4f61-4d47-9f6b-3faf8804f35a}</UniqueIdentifier>
+      <UniqueIdentifier>{20db7e8e-6cbb-4045-9e6e-d2124bbbb9c0}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameStringTable">
-      <UniqueIdentifier>{33aa93d4-b1f2-4357-bc94-1c26bbb50b73}</UniqueIdentifier>
+      <UniqueIdentifier>{837b407a-2394-4924-9a39-60cae149eb3e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

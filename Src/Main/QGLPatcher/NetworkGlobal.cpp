@@ -1,7 +1,14 @@
+// curl support disabled due to missing curl library - curl-7.30.0 requires separate build
+/*
 #include <curl/curl.h>
 #include <curl/types.h>
 #include <curl/easy.h>
+*/
+#include <stdio.h>
 #include "NetworkGlobal.h"
+
+// Define CURL_READFUNC_ABORT since curl headers are disabled
+#define CURL_READFUNC_ABORT 0x00000001
 
 size_t getcontentlengthfunc(const char *ptr, size_t size, size_t nmemb, void *stream) {
 	int r;

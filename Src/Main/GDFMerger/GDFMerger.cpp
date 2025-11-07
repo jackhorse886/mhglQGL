@@ -1,7 +1,8 @@
-// GDFMerger.cpp : ©w¸qÀ³¥Îµ{¦¡ªºÃþ§O¦æ¬°¡C
+// GDFMerger.cpp : ï¿½wï¿½qï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½æ¬°ï¿½C
 //
 
 #include "stdafx.h"
+#include "Common.h"
 #include "GDFMerger.h"
 #include "GDFMergerDlg.h"
 
@@ -17,54 +18,64 @@ BEGIN_MESSAGE_MAP(CGDFMergerApp, CWinApp)
 END_MESSAGE_MAP()
 
 
-// CGDFMergerApp «Øºc
+// CGDFMergerApp ï¿½Øºc
 
 CGDFMergerApp::CGDFMergerApp()
 {
-	// TODO: ¦b¦¹¥[¤J«Øºcµ{¦¡½X¡A
-	// ±N©Ò¦³­«­nªºªì©l³]©w¥[¤J InitInstance ¤¤
+	// TODO: ï¿½bï¿½ï¿½ï¿½[ï¿½Jï¿½Øºcï¿½{ï¿½ï¿½ï¿½Xï¿½A
+	// ï¿½Nï¿½Ò¦ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½lï¿½]ï¿½wï¿½J InitInstance ï¿½ï¿½
 }
 
 
-// ¶È¦³ªº¤@­Ó CGDFMergerApp ª«¥ó
+// ï¿½È¦ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ CGDFMergerApp ï¿½ï¿½ï¿½ï¿½
 
 CGDFMergerApp theApp;
 
 
-// CGDFMergerApp ªì©l³]©w
+// CGDFMergerApp ï¿½ï¿½lï¿½]ï¿½w
 
 BOOL CGDFMergerApp::InitInstance()
 {
-	// °²¦pÀ³¥Îµ{¦¡¸ê°T²M³æ«ü©w¨Ï¥Î ComCtl32.dll 6.0 (§t) ¥H«áª©¥»
-	// ¥H±Ò¥ÎµøÄ±¤Æ¼Ë¦¡¡A«h Windows XP »Ý­n InitCommonControls()¡C§_«hªº¸Ü¡A
-	// ¥ô¦óµøµ¡ªº«Ø¥ß±N¥¢±Ñ¡C
+	// Initialize Global Logger for Reuben library
+	//try
+	//{
+	//	gGlobalLogger = NEW Logger(_T("GDFMerger"), _T("."), _T("GDFMerger.log"));
+	//}
+	//catch (...)
+	//{
+	//	gGlobalLogger = NULL;
+	//}
+
+	// ï¿½ï¿½ï¿½pï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½Tï¿½Mï¿½ï¿½ï¿½ï¿½wï¿½Ï¥ï¿½ ComCtl32.dll 6.0 (ï¿½t) ï¿½Hï¿½áª©ï¿½ï¿½
+	// ï¿½Hï¿½Ò¥Îµï¿½Ä±ï¿½Æ¼Ë¦ï¿½ï¿½Aï¿½h Windows XP ï¿½Ý­n InitCommonControls()ï¿½Cï¿½_ï¿½hï¿½ï¿½ï¿½Ü¡A
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¥ß±Nï¿½ï¿½ï¿½Ñ¡C
 	InitCommonControls();
 
 	CWinApp::InitInstance();
 
 	AfxEnableControlContainer();
 
-	// ¼Ð·Çªì©l³]©w
-	// ¦pªG±z¤£¨Ï¥Î³o¨Ç¥\¯à¨Ã¥B·Q´î¤Ö³Ì«á§¹¦¨ªº¥i°õ¦æÀÉ¤j¤p¡A±z¥i¥H±q¤U¦C
-	// µ{¦¡½X²¾°£¤£»Ý­nªºªì©l¤Æ±`¦¡¡AÅÜ§óÀx¦s³]©w­Èªºµn¿ý¾÷½X
-	// TODO: ±zÀ³¸Ó¾A«×­×§ï¦¹¦r¦ê (¨Ò¦p¡A¤½¥q¦WºÙ©Î²ÕÂ´¦WºÙ)
-	SetRegistryKey(_T("¥»¾÷ AppWizard ©Ò²£¥ÍªºÀ³¥Îµ{¦¡"));
+	// ï¿½Ð·Çªï¿½lï¿½]ï¿½w
+	// ï¿½pï¿½Gï¿½zï¿½ï¿½ï¿½Ï¥Î³oï¿½Ç¥\ï¿½ï¿½Ã¥Bï¿½Qï¿½ï¿½Ö³Ì«á§¹ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½É¤jï¿½pï¿½Aï¿½zï¿½iï¿½Hï¿½qï¿½Uï¿½C
+	// ï¿½{ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý­nï¿½ï¿½ï¿½ï¿½lï¿½Æ±`ï¿½ï¿½ï¿½Aï¿½Ü§ï¿½ï¿½xï¿½sï¿½]ï¿½wï¿½Èªï¿½ï¿½nï¿½ï¿½ï¿½ï¿½ï¿½X
+	// TODO: ï¿½zï¿½ï¿½ï¿½Ó¾Aï¿½×­×§æƒ¡ï¿½rï¿½ï¿½ (ï¿½Ò¦pï¿½Aï¿½ï¿½ï¿½qï¿½Wï¿½Ù©Î²ï¿½Â´ï¿½Wï¿½ï¿½)
+	SetRegistryKey(_T("ï¿½ï¿½ï¿½ï¿½ AppWizard ï¿½Ò²ï¿½ï¿½Íªï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½"));
 
 	CGDFMergerDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
 	{
-		// TODO: ¦b¦¹©ñ¸m©ó¨Ï¥Î [½T©w] ¨Ó°±¤î¨Ï¥Î¹ï¸Ü¤è¶ô®É
-		// ³B²zªºµ{¦¡½X
+		// TODO: ï¿½bï¿½ï¿½ï¿½ï¿½mï¿½ï¿½Ï¥ï¿½ [ï¿½Tï¿½w] ï¿½Ó°ï¿½ï¿½ï¿½Ï¥Î¹ï¿½Ü¤ï¿½ï¿½ï¿½ï¿½
+		// ï¿½Bï¿½zï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½X
 	}
 	else if (nResponse == IDCANCEL)
 	{
-		// TODO: ¦b¦¹©ñ¸m©ó¨Ï¥Î [¨ú®ø] ¨Ó°±¤î¨Ï¥Î¹ï¸Ü¤è¶ô®É
-		// ³B²zªºµ{¦¡½X
+		// TODO: ï¿½bï¿½ï¿½ï¿½ï¿½mï¿½ï¿½Ï¥ï¿½ [ï¿½ï¿½ï¿½ï¿½] ï¿½Ó°ï¿½ï¿½ï¿½Ï¥Î¹ï¿½Ü¤ï¿½ï¿½ï¿½ï¿½
+		// ï¿½Bï¿½zï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½X
 	}
 
-	// ¦]¬°¤w¸gÃö³¬¹ï¸Ü¤è¶ô¡A¶Ç¦^ FALSE¡A©Ò¥H§Ú­Ì·|µ²§ôÀ³¥Îµ{¦¡¡A
-	// ¦Ó«D´£¥Ü¶}©lÀ³¥Îµ{¦¡ªº°T®§¡C
+	// ï¿½]ï¿½ï¿½ï¿½wï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¤ï¿½ï¿½ï¿½Aï¿½Ç¦^ FALSEï¿½Aï¿½Ò¥Hï¿½Ú­Ì·|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½A
+	// ï¿½Ó«Dï¿½ï¿½ï¿½Ü¶}ï¿½lï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½C
 	return FALSE;
 }

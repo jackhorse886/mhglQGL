@@ -14,13 +14,13 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="GDFPackager">
-      <UniqueIdentifier>{89202aeb-f05c-45f5-a359-18db793ce218}</UniqueIdentifier>
+      <UniqueIdentifier>{885a0519-3f85-4e5d-8b36-89408289c203}</UniqueIdentifier>
     </Filter>
     <Filter Include="CSV_Text">
-      <UniqueIdentifier>{4bde4ff8-0dcf-426c-825a-8dca33dd6f76}</UniqueIdentifier>
+      <UniqueIdentifier>{3bd91500-1988-414f-9075-29b290c16571}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameStringTable">
-      <UniqueIdentifier>{2d9d526b-ea48-4f45-a11d-023c31ace8e4}</UniqueIdentifier>
+      <UniqueIdentifier>{7813a96b-be33-4e69-99fb-efa47ae91a88}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

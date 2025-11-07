@@ -14,19 +14,19 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="FindFile">
-      <UniqueIdentifier>{0d244eb7-5082-4e70-9ac3-2933d3c29a47}</UniqueIdentifier>
+      <UniqueIdentifier>{72860f7f-789d-4c9c-82b3-1c5161c026fb}</UniqueIdentifier>
     </Filter>
     <Filter Include="common">
-      <UniqueIdentifier>{dab9e752-cf7b-4c67-aa71-bdd56e287335}</UniqueIdentifier>
+      <UniqueIdentifier>{700a16de-3b5e-465a-b78e-04427a9eda02}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFManager">
-      <UniqueIdentifier>{33ec3700-536e-4dbd-be5d-da5f575ffe12}</UniqueIdentifier>
+      <UniqueIdentifier>{8daf9c95-a5a6-4675-95eb-5dac0468ac76}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFPackageMaker">
-      <UniqueIdentifier>{c5b592f8-789d-4203-8689-b7fe8ebf5b4a}</UniqueIdentifier>
+      <UniqueIdentifier>{57cbdc75-564b-45af-84db-cc971f8d6199}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFStream">
-      <UniqueIdentifier>{05f715fb-7d0e-40a0-b325-a160131ee523}</UniqueIdentifier>
+      <UniqueIdentifier>{752957a8-164c-4a02-a26a-a25ffb736260}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

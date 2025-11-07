@@ -14,40 +14,40 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="HoverButton">
-      <UniqueIdentifier>{54cdf352-1856-4f36-a904-1f835935bcc1}</UniqueIdentifier>
+      <UniqueIdentifier>{68f64cfb-4c3a-4775-a5d9-7f868eff124c}</UniqueIdentifier>
     </Filter>
     <Filter Include="InternetSession">
-      <UniqueIdentifier>{da234936-d529-4e8c-b0ec-6eaf462766c5}</UniqueIdentifier>
+      <UniqueIdentifier>{888c28d6-3f9e-44bf-b7b4-d91ffecab344}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameStringTable">
-      <UniqueIdentifier>{ba62970b-629f-4691-99de-99aed8e0c082}</UniqueIdentifier>
+      <UniqueIdentifier>{f1c69c29-8206-4465-a05d-79ce2062130b}</UniqueIdentifier>
     </Filter>
     <Filter Include="CSV_Text">
-      <UniqueIdentifier>{082cae7a-9bf9-4acf-b018-4b40f43e822c}</UniqueIdentifier>
+      <UniqueIdentifier>{8a95274d-92cb-44ee-b42f-5e0a2c046187}</UniqueIdentifier>
     </Filter>
     <Filter Include="GDFPackager">
-      <UniqueIdentifier>{fd3fef7a-a192-4395-b45e-4ea9d805eada}</UniqueIdentifier>
+      <UniqueIdentifier>{8aab8a64-45a2-43f6-a353-02ee687ac853}</UniqueIdentifier>
     </Filter>
     <Filter Include="Misc">
-      <UniqueIdentifier>{3df8a630-60d5-402e-9dcc-cc57f0297121}</UniqueIdentifier>
+      <UniqueIdentifier>{9046783d-552c-436b-8f45-32a529ec9efc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Network">
-      <UniqueIdentifier>{2b1a6568-8fae-4c22-94f2-499e89aef3cc}</UniqueIdentifier>
+      <UniqueIdentifier>{d7b6c357-9c25-477f-b8f0-6b4fc170c8ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="SelectionList">
-      <UniqueIdentifier>{89317df0-723e-4615-8666-2a4bb9127ff9}</UniqueIdentifier>
+      <UniqueIdentifier>{b87a0f91-94c6-437c-b27a-e553895c23e0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Configure">
-      <UniqueIdentifier>{c02ef446-fbab-48d5-8598-546a21490ad3}</UniqueIdentifier>
+      <UniqueIdentifier>{f3cb7581-a6af-4859-9f31-f6a59a97c419}</UniqueIdentifier>
     </Filter>
     <Filter Include="UIManager">
-      <UniqueIdentifier>{7e481daa-efa0-4851-958b-6c6018b7ed2a}</UniqueIdentifier>
+      <UniqueIdentifier>{ad46879b-e4bb-4be9-badf-ab8545cf1341}</UniqueIdentifier>
     </Filter>
     <Filter Include="ProgressMonitor">
-      <UniqueIdentifier>{7b66a941-87e5-43ad-a548-83f7750e0456}</UniqueIdentifier>
+      <UniqueIdentifier>{e6780930-8bd0-46e0-941a-5c9f4dd2c337}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dialog">
-      <UniqueIdentifier>{089699a5-986d-4447-866d-aef4db9fced9}</UniqueIdentifier>
+      <UniqueIdentifier>{ffb2e987-617c-4cb4-979e-280d75b6f316}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

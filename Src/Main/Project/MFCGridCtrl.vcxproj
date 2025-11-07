@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9E3F4B3D-7A4C-4F1E-9B2D-8A5C7F6E9D1A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MFCGridCtrl</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>..\..\..\OBJ\MFCGridCtrl\Debug\</IntDir>
+    <TargetName>MFCGridCtrlUD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Bin\</OutDir>
+    <IntDir>..\..\..\OBJ\MFCGridCtrl\Release\</IntDir>
+    <TargetName>MFCGridCtrlU</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\..\OBJ\MFCGridCtrl\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\..\OBJ\MFCGridCtrl\Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <Lib>
+      <OutputFile>..\..\..\Bin\MFCGridCtrlU.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\CellRange.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCell.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellBase.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCheck.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCombo.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellDateTime.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFile.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFileDialog.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellNumeric.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCtrl.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridDropTarget.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridURLCell.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\MemDC.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\TitleTip.h" />
+    <ClInclude Include="..\Library\MFCGridCtrl\MFCGridCtrl\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCell.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCheck.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellCombo.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellDateTime.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFile.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellFileDialog.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCellNumeric.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\GridURLCell.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\TitleTip.cpp" />
+    <ClCompile Include="..\Library\MFCGridCtrl\MFCGridCtrl\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

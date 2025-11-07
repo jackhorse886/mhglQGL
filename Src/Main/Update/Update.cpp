@@ -1,4 +1,4 @@
-// Update.cpp : ©w¸qÀ³¥Îµ{¦¡ªºÃþ§O¦æ¬°¡C
+// Update.cpp : ï¿½wï¿½qï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½æ¬°ï¿½C
 //
 
 #include "stdafx.h"
@@ -33,31 +33,31 @@ BEGIN_MESSAGE_MAP(CUpdateApp, CWinApp)
 END_MESSAGE_MAP()
 
 
-// CUpdateApp «Øºc
+// CUpdateApp ï¿½Øºc
 
 CUpdateApp::CUpdateApp()
 {
 	SetMainDialog(NULL);
-	// TODO: ¦b¦¹¥[¤J«Øºcµ{¦¡½X¡A
-	// ±N©Ò¦³­«­nªºªì©l³]©w¥[¤J InitInstance ¤¤
+	// TODO: ï¿½bï¿½ï¿½ï¿½[ï¿½Jï¿½Øºcï¿½{ï¿½ï¿½ï¿½Xï¿½A
+	// ï¿½Nï¿½Ò¦ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½lï¿½]ï¿½wï¿½[ï¿½J InitInstance ï¿½ï¿½
 }
 
 
-// ¶È¦³ªº¤@­Ó CUpdateApp ª«¥ó
+// ï¿½È¦ï¿½ï¿½ï¿½ï¿½@ï¿½ï¿½ CUpdateApp ï¿½ï¿½ï¿½ï¿½
 
 CUpdateApp theApp;
 
 
-// CUpdateApp ªì©l³]©w
+// CUpdateApp ï¿½ï¿½lï¿½]ï¿½w
 
 BOOL CUpdateApp::InitInstance()
 {
 	CWinApp::InitInstance();
 
-	// ¼Ð·Çªì©l³]©w
-	// ¦pªG±z¤£¨Ï¥Î³o¨Ç¥\¯à¨Ã¥B·Q´î¤Ö³Ì«á§¹¦¨ªº¥i°õ¦æÀÉ¤j¤p¡A±z¥i¥H±q¤U¦C
-	// µ{¦¡½X²¾°£¤£»Ý­nªºªì©l¤Æ±`¦¡¡AÅÜ§óÀx¦s³]©w­Èªºµn¿ý¾÷½X
-	// TODO: ±zÀ³¸Ó¾A«×­×§ï¦¹¦r¦ê (¨Ò¦p¡A¤½¥q¦WºÙ©Î²ÕÂ´¦WºÙ)
+	// ï¿½Ð·Çªï¿½lï¿½]ï¿½w
+	// ï¿½pï¿½Gï¿½zï¿½ï¿½ï¿½Ï¥Î³oï¿½Ç¥\ï¿½ï¿½Ã¥Bï¿½Qï¿½ï¿½Ö³Ì«á§¹ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½É¤jï¿½pï¿½Aï¿½zï¿½iï¿½Hï¿½qï¿½Uï¿½C
+	// ï¿½{ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý­nï¿½ï¿½ï¿½ï¿½lï¿½Æ±`ï¿½ï¿½ï¿½Aï¿½Ü§ï¿½ï¿½xï¿½sï¿½]ï¿½wï¿½Èªï¿½ï¿½nï¿½ï¿½ï¿½ï¿½ï¿½X
+	// TODO: ï¿½zï¿½ï¿½ï¿½Ó¾Aï¿½×­×§ï¦¹ï¿½rï¿½ï¿½ (ï¿½Ò¦pï¿½Aï¿½ï¿½ï¿½qï¿½Wï¿½Ù©Î²ï¿½Â´ï¿½Wï¿½ï¿½)
 
 	m_stringTable.Load(GAMESTRINGTABLE_LOCALIZATION_FILENAME);
 
@@ -69,17 +69,17 @@ BOOL CUpdateApp::InitInstance()
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
 	{
-		// TODO: ¦b¦¹©ñ¸m©ó¨Ï¥Î [½T©w] ¨Ó°±¤î¨Ï¥Î¹ï¸Ü¤è¶ô®É
-		// ³B²zªºµ{¦¡½X
+		// TODO: ï¿½bï¿½ï¿½ï¿½ï¿½mï¿½ï¿½Ï¥ï¿½ [ï¿½Tï¿½w] ï¿½Ó°ï¿½ï¿½ï¿½Ï¥Î¹ï¿½Ü¤ï¿½ï¿½ï¿½ï¿½
+		// ï¿½Bï¿½zï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½X
 	}
 	else if (nResponse == IDCANCEL)
 	{
-		// TODO: ¦b¦¹©ñ¸m©ó¨Ï¥Î [¨ú®ø] ¨Ó°±¤î¨Ï¥Î¹ï¸Ü¤è¶ô®É
-		// ³B²zªºµ{¦¡½X
+		// TODO: ï¿½bï¿½ï¿½ï¿½ï¿½mï¿½ï¿½Ï¥ï¿½ [ï¿½ï¿½ï¿½ï¿½] ï¿½Ó°ï¿½ï¿½ï¿½Ï¥Î¹ï¿½Ü¤ï¿½ï¿½ï¿½ï¿½
+		// ï¿½Bï¿½zï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½X
 	}
 
-	// ¦]¬°¤w¸gÃö³¬¹ï¸Ü¤è¶ô¡A¶Ç¦^ FALSE¡A©Ò¥H§Ú­Ì·|µ²§ôÀ³¥Îµ{¦¡¡A
-	// ¦Ó«D´£¥Ü¶}©lÀ³¥Îµ{¦¡ªº°T®§¡C
+	// ï¿½]ï¿½ï¿½ï¿½wï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¤ï¿½ï¿½ï¿½Aï¿½Ç¦^ FALSEï¿½Aï¿½Ò¥Hï¿½Ú­Ì·|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½A
+	// ï¿½Ó«Dï¿½ï¿½ï¿½Ü¶}ï¿½lï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½ï¿½ï¿½C
 	return FALSE;
 }
 
@@ -214,7 +214,7 @@ BOOL CUpdateApp::CreateFolder(LPCTSTR szFolder) // Copy from Unzipper.cpp
 	TCHAR* szPath = _tcsdup(szFolder);
 	String abc = szPath;
 	abc.Replace(_T("/"), _T("\\"));
-	TCHAR* p = _tcsrchr(abc.c_str(), '\\');
+	TCHAR* p = const_cast<TCHAR*>(_tcsrchr(abc.c_str(), '\\'));
 
 	if (p) 
 	{

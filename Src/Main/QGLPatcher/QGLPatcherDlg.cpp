@@ -1,4 +1,4 @@
-// QGLPatcherDlg.cpp : ¹ê§@ÀÉ
+// QGLPatcherDlg.cpp : ï¿½ï¿½@ï¿½ï¿½
 //
 
 #include "stdafx.h"
@@ -18,7 +18,7 @@
 
 #define TRANSPARENTCOLOR						RGB(0, 255, 0);
 
-// CQGLPatcherDlg ¹ï¸Ü¤è¶ô
+// CQGLPatcherDlg ï¿½ï¿½Ü¤ï¿½ï¿½
 
 
 
@@ -214,18 +214,18 @@ BEGIN_MESSAGE_MAP(CQGLPatcherDlg, CDialog)
 END_MESSAGE_MAP()
 
 
-// CQGLPatcherDlg °T®§³B²z±`¦¡
+// CQGLPatcherDlg ï¿½Tï¿½ï¿½ï¿½Bï¿½zï¿½`ï¿½ï¿½
 
 BOOL CQGLPatcherDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// ³]©w¦¹¹ï¸Ü¤è¶ôªº¹Ï¥Ü¡C·íÀ³¥Îµ{¦¡ªº¥Dµøµ¡¤£¬O¹ï¸Ü¤è¶ô®É¡A
-	// ®Ø¬[·|¦Û°Ê±q¨Æ¦¹§@·~
-	SetIcon(m_hIcon, TRUE);			// ³]©w¤j¹Ï¥Ü
-	SetIcon(m_hIcon, FALSE);		// ³]©w¤p¹Ï¥Ü
+	// ï¿½]ï¿½wï¿½ï¿½ï¿½ï¿½Ü¤ï¿½ï¿½ï¿½ï¿½ï¿½Ï¥Ü¡Cï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½Ü¤ï¿½ï¿½ï¿½É¡A
+	// ï¿½Ø¬[ï¿½|ï¿½Û°Ê±qï¿½Æ¦ï¿½ï¿½@ï¿½~
+	SetIcon(m_hIcon, TRUE);			// ï¿½]ï¿½wï¿½jï¿½Ï¥ï¿½
+	SetIcon(m_hIcon, FALSE);		// ï¿½]ï¿½wï¿½pï¿½Ï¥ï¿½
 
-	// TODO: ¦b¦¹¥[¤JÃB¥~ªºªì©l³]©w
+	// TODO: ï¿½bï¿½ï¿½ï¿½[ï¿½Jï¿½Bï¿½~ï¿½ï¿½ï¿½ï¿½lï¿½]ï¿½w
 	time(&m_PrevTime);
 
 	String filename(Reuben::System::GetApplicationFileName());
@@ -426,21 +426,21 @@ BOOL CQGLPatcherDlg::OnInitDialog()
 		m_initTrackerDlg->ShowWindow(1);
 	}
 	
-	return TRUE;  // ¶Ç¦^ TRUE¡A°£«D±z¹ï±±¨î¶µ³]©wµJÂI
+	return TRUE;  // ï¿½Ç¦^ TRUEï¿½Aï¿½ï¿½ï¿½Dï¿½zï¿½ï±±ï¿½î¶µï¿½]ï¿½wï¿½Jï¿½I
 }
 
-// ¦pªG±N³Ì¤p¤Æ«ö¶s¥[¤J±zªº¹ï¸Ü¤è¶ô¡A±z»Ý­n¤U¦Cªºµ{¦¡½X¡A¥H«KÃ¸»s¹Ï¥Ü¡C
-// ¹ï©ó¨Ï¥Î¤å¥ó/ÀËµø¼Ò¦¡ªº MFC À³¥Îµ{¦¡¡A®Ø¬[·|¦Û°Ê§¹¦¨¦¹§@·~¡C
+// ï¿½pï¿½Gï¿½Nï¿½Ì¤pï¿½Æ«ï¿½ï¿½sï¿½[ï¿½Jï¿½zï¿½ï¿½ï¿½ï¿½Ü¤ï¿½ï¿½ï¿½Aï¿½zï¿½Ý­nï¿½Uï¿½Cï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½Xï¿½Aï¿½Hï¿½KÃ¸ï¿½sï¿½Ï¥Ü¡C
+// ï¿½ï¿½ï¿½Ï¥Î¤ï¿½ï¿½/ï¿½Ëµï¿½ï¿½Ò¦ï¿½ï¿½ï¿½ MFC ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½Aï¿½Ø¬[ï¿½|ï¿½Û°Ê§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½~ï¿½C
 
 void CQGLPatcherDlg::OnPaint() 
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // Ã¸»sªº¸Ë¸m¤º®e
+		CPaintDC dc(this); // Ã¸ï¿½sï¿½ï¿½ï¿½Ë¸mï¿½ï¿½ï¿½e
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// ±N¹Ï¥Ü¸m¤¤©ó¥Î¤áºÝ¯x§Î
+		// ï¿½Nï¿½Ï¥Ü¸mï¿½ï¿½ï¿½ï¿½Î¤ï¿½Ý¯xï¿½ï¿½
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
@@ -448,7 +448,7 @@ void CQGLPatcherDlg::OnPaint()
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
 
-		// ´yÃ¸¹Ï¥Ü
+		// ï¿½yÃ¸ï¿½Ï¥ï¿½
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
@@ -809,7 +809,7 @@ void CQGLPatcherDlg::OnSize(UINT nType, int cx, int cy)
 	DeleteObject(m_hBitmap);	//not really need but what the heck.
 }
 
-//·í¨Ï¥ÎªÌ©ì¦²³Ì¤p¤Æµøµ¡®É¡A¨t²Î©I¥s³o­Ó¥\¯à¨ú±o´å¼ÐÅã¥Ü¡C
+//ï¿½ï¿½ï¿½Ï¥ÎªÌ©ì¦²ï¿½Ì¤pï¿½Æµï¿½ï¿½ï¿½ï¿½É¡Aï¿½tï¿½Î©Iï¿½sï¿½oï¿½Ó¥\ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½Ü¡C
 HCURSOR CQGLPatcherDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
@@ -1461,7 +1461,8 @@ VOID CQGLPatcherDlg::SelectServerAction(UInt serverNo)
 		UInt32 counter = 0;
 		if( zoneIdx < zonemap.size() )
 		{
-			for( ZoneMap::iterator itr = zonemap.begin(); counter < zoneIdx; ++itr, ++counter );
+			ZoneMap::iterator itr = zonemap.begin();
+			for( ; counter < zoneIdx; ++itr, ++counter );
 			Zone& zone = itr->second;
 			theApp.SetSelectedZone(zone);
 			if( theApp.GetSelectedZone() )

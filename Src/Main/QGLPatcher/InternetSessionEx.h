@@ -1,6 +1,9 @@
 #pragma once
 #include <afxinet.h>
 
+// Custom Windows Message for session updates
+#define WMU_SESSIONUPDATE (WM_USER + 1)
+
 typedef void(*UPDATEFNC)(const CString &);
 
 // CInternetSessionEx command target
