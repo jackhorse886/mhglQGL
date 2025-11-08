@@ -37,7 +37,6 @@ CQGLPatcherApp::CQGLPatcherApp()
 	// TODO: �b���[�J�غc�{���X�A
 	// �N�Ҧ����n����l�]�w�[�J InitInstance ��
 	InitLogger();
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] CQGLPatcherApp Constructor: Logger initialized at startup"));
 	m_stringTable.Load(GAMESTRINGTABLE_LOCALIZATION_FILENAME);
 	if( !m_configureApp.LoadConfigure() )
 		TRACE_ERRORDTL(GLOBAL_LOGGER, _T("CQGLPatcherApp::CQGLPatcherApp() Err [Configure App LoadConfigure failed]"));
@@ -70,11 +69,8 @@ CQGLPatcherApp theApp;
 
 BOOL CQGLPatcherApp::InitInstance()
 {
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] InitInstance() called"));
 	if (!Reuben::System::Initialize())
 		return (-2);
-
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] Reuben::System::Initialize() completed"));
 
 	InitAllocCheck(ACOutput_XML);
 
@@ -108,20 +104,18 @@ BOOL CQGLPatcherApp::InitInstance()
 	if( !LoadGeneralConfig() )
 		return FALSE;
 
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] LoadGeneralConfig() completed successfully"));
+	// Initialize logger AFTER LoadGeneralConfig so m_currentDir is set
+	InitLogger();
 
 	CreateDirStructure();
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] CreateDirStructure() completed"));
 
 	if( !LoadTrackerConfig() )
-	{
 		TRACE_ERRORDTL(GLOBAL_LOGGER, _T("QGLPatcher::Init Error (1) [Tracker not found.  Default is used instead.]"));
-	}
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] LoadTrackerConfig() completed"));
 
 	m_errorList.clear();
 
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] RecursiveMoveExceptPatcher() called"));
+	BOOL bExceptionFound = FALSE;
+	if( RecursiveMoveExceptPatcher(m_trashDir.c_str(), m_currentDir.c_str(), _T(""), bExceptionFound) )
 	{
 		// succeeded
 		if( bExceptionFound )
@@ -138,7 +132,6 @@ BOOL CQGLPatcherApp::InitInstance()
 
 			CQGLPatcherDlg dlg;
 			m_curMainDlg = &dlg;
-			TRACE_INFODTL(GLOBAL_LOGGER, _T("[STARTUP] CQGLPatcherDlg object created, about to show DoModal()"));
 			INT_PTR nResponse = dlg.DoModal();
 			if (nResponse == IDOK)
 			{
@@ -219,18 +212,45 @@ BOOL CQGLPatcherApp::LoadTrackerConfig()
 {
 	BOOL succeed = TRUE;
 
-	// Always use default remote tracker server, ignore local cache
-	FreeTrackerConfig();
+	TCHAR pBuf[MAX_PATH];
+	String accessVariable;
+	// tracker IP address configuration
+	UInt trackerCount = GetPrivateProfileInt(_T("TRACKERIP"), _T("count"), 0, CONFIGURATION_INI_LOCAL_FILE);
+	if( trackerCount==0 )
+	{
+		FreeTrackerConfig();
 
-	WebAccessData webdata;
-	webdata.type	= DEFAULT_TRACKER_TYPE;
-	webdata.ip		= DEFAULT_TRACKER_IP;
-	webdata.port	= DEFAULT_TRACKER_PORT;
-	webdata.path	= DEFAULT_TRACKER_PATH;
-	webdata.file	= DEFAULT_TRACKER_FILE;
-	m_trackerList.push_back(webdata);
+		WebAccessData webdata;
+		webdata.type	= DEFAULT_TRACKER_TYPE;
+		webdata.ip		= DEFAULT_TRACKER_IP;
+		webdata.port	= DEFAULT_TRACKER_PORT;
+		webdata.path	= DEFAULT_TRACKER_PATH;
+		webdata.file	= DEFAULT_TRACKER_FILE;
+		m_trackerList.push_back(webdata);
 
-	succeed = TRUE;
+		succeed = FALSE;
+	}else
+	{
+		for( Index i = C_INDEX(0); i < trackerCount; ++i )
+		{
+			WebAccessData webdata;
+
+			accessVariable.Format(_T("server%i"), i+1);
+			GetPrivateProfileString(_T("TRACKERIP"), accessVariable.c_str(), _T("\0"), pBuf, MAX_PATH, CONFIGURATION_INI_LOCAL_FILE);
+
+			String ipaddress, path, file;
+			UInt port, type;
+			ConvertURLtoComponents(pBuf, ipaddress, port, type, path, file);
+
+			// last. gather all information up and store
+			webdata.type	= type;
+			webdata.ip		= ipaddress;
+			webdata.port	= port;
+			webdata.path	= path;
+			webdata.file	= file;
+			m_trackerList.push_back(webdata);
+		}
+	}
 
 	for( Index i = C_INDEX(0); i < m_trackerList.size(); ++i )
 	{
@@ -347,31 +367,22 @@ BOOL CQGLPatcherApp::CopyTrackerConfig()
 
 BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 {
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("CQGLPatcherApp::DownloadTrackerIpIni() ENTER"));
 	SetCurStatus(PATCHER_TRACKER_DOWNLOADING);
 	m_curMainDlg->m_startGame.LockStatus(3);
 	m_curMainDlg->m_startGame.RedrawWindow();
 
+	TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Function started"));
+
 	BOOL bSuccess = FALSE;
-	// Check if tracker file already exists
-	BOOL bTrackerExists = (GetFileAttributes(LOCAL_TRACKER_LIST_FILE) != INVALID_FILE_ATTRIBUTES);
-	TRACE_INFODTL_2(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Tracker file exists=%d, file=%s"), bTrackerExists, LOCAL_TRACKER_LIST_FILE);
-	
-	if( bTrackerExists )
+	if( !GetConfigureApp()->m_debug_ui )
 	{
-		// Tracker file already exists, use it directly
-		TRACE_INFODTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Using existing tracker file"));
-		bSuccess = TRUE;
-	}
-	else if( !GetConfigureApp()->m_debug_ui )
-	{
+		TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Debug UI is off, starting download loop"));
 		WebAccessData curWebData;
 		while(true)
 		{
 			do
 			{
 				curWebData = SelectTrackerData();
-				TRACE_INFODTL_4(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Selected tracker, type=%d, ip=%s, port=%d, file=%s"), curWebData.type, curWebData.ip.c_str(), curWebData.port, curWebData.file.c_str());
 				switch( curWebData.type )
 				{
 				case 1:		// HTTP protocol
@@ -384,19 +395,33 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 						String strFilename	= curWebData.file;
 						String strLocalFilename	= LOCAL_TRACKER_LIST_FILE;
 
-						TRACE_INFODTL_5(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: HTTP Download START, ip=%s, port=%d, path=%s, file=%s, local=%s"), strIP.c_str(), uPort, strPath.c_str(), strFilename.c_str(), strLocalFilename.c_str());
+						DeleteFile(strLocalFilename.c_str());
+						DeleteFile(_T("patch\\srvlistf2.txt"));
+						DeleteFile(_T("patch\\zonelist.txt"));
+						DeleteFile(_T("patch\\fileversion.txt"));
+											
+						TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading trackerip.txt"));
 						bSuccess = HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), strFilename.c_str(), strLocalFilename.c_str());
-						TRACE_INFODTL_2(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: HTTP Download END, success=%d, file=%s"), bSuccess, strFilename.c_str());
+						TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] trackerip.txt download result: %d"), bSuccess);
+											
 						if( bSuccess )
 						{
-							TRACE_INFODTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Downloading additional files (srvlistf2.txt, zonelist.txt, fileversion.txt)"));
-							bSuccess = HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("srvlistf2.txt"), _T("patch\\srvlistf2.txt"));
-							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: srvlistf2.txt download result=%d"), bSuccess);
-							bSuccess = bSuccess && HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("zonelist.txt"), _T("patch\\zonelist.txt"));
-							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: zonelist.txt download result=%d"), bSuccess);
-							bSuccess = bSuccess && HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("fileversion.txt"), _T("patch\\fileversion.txt"));
-							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: fileversion.txt download result=%d"), bSuccess);
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading srvlistf2.txt"));
+							BOOL bRet = HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("srvlistf2.txt"), _T("patch\\srvlistf2.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] srvlistf2.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
+												
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading zonelist.txt"));
+							bRet = HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("zonelist.txt"), _T("patch\\zonelist.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] zonelist.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
+												
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading fileversion.txt"));
+							bRet = HTTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("fileversion.txt"), _T("patch\\fileversion.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] fileversion.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
 						}
+						TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] HTTP download final result: %d"), bSuccess);
 					}
 					break;
 				case 2:		// FTP protocol
@@ -409,13 +434,33 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 						String strFilename	= curWebData.file;
 						String strLocalFilename	= LOCAL_TRACKER_LIST_FILE;
 
+						DeleteFile(strLocalFilename.c_str());
+						DeleteFile(_T("patch\\srvlistf2.txt"));
+						DeleteFile(_T("patch\\zonelist.txt"));
+						DeleteFile(_T("patch\\fileversion.txt"));
+											
+						TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading trackerip.txt via FTP"));
 						bSuccess = FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), strFilename.c_str(), strLocalFilename.c_str());
+						TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] FTP trackerip.txt download result: %d"), bSuccess);
+											
 						if( bSuccess )
 						{
-							bSuccess = FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("srvlistf2.txt"), _T("patch\\srvlistf2.txt"));
-							bSuccess = bSuccess && FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("zonelist.txt"), _T("patch\\zonelist.txt"));
-							bSuccess = bSuccess && FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("fileversion.txt"), _T("patch\\fileversion.txt"));
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading srvlistf2.txt via FTP"));
+							BOOL bRet = FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("srvlistf2.txt"), _T("patch\\srvlistf2.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] FTP srvlistf2.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
+												
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading zonelist.txt via FTP"));
+							bRet = FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("zonelist.txt"), _T("patch\\zonelist.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] FTP zonelist.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
+												
+							TRACE_INFODTL(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] Start downloading fileversion.txt via FTP"));
+							bRet = FTPDownload(strIP.c_str(), uPort, strUsername.c_str(), strPassword.c_str(), strPath.c_str(), _T("fileversion.txt"), _T("patch\\fileversion.txt"));
+							TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] FTP fileversion.txt download result: %d"), bRet);
+							bSuccess = bSuccess && bRet;
 						}
+						TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] FTP download final result: %d"), bSuccess);
 					}
 					break;
 				}
@@ -432,20 +477,21 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 
 	// if successfully download and integrated Tracker setting, set status to Free Navigation;
 	// if not, pop an message.
-	TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: After download, bSuccess=%d, about to reload configure"), bSuccess);
-	BOOL bCfgServerListReloaded = GetConfigureServerList()->ReloadConfigure();
-	BOOL bCfgZoneListReloaded = GetConfigureZoneList()->ReloadConfigure();
-	BOOL bCfgVersionReloaded = GetConfigureVersion()->ReloadConfigure();
-	TRACE_INFODTL_3(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Configure reload results - ServerList=%d, ZoneList=%d, Version=%d"), bCfgServerListReloaded, bCfgZoneListReloaded, bCfgVersionReloaded);
+	TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] About to check ReloadConfigure, bSuccess = %d"), bSuccess);
+	BOOL bConfigServerList = GetConfigureServerList()->ReloadConfigure();
+	TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] GetConfigureServerList()->ReloadConfigure() result: %d"), bConfigServerList);
+	BOOL bConfigZoneList = GetConfigureZoneList()->ReloadConfigure();
+	TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] GetConfigureZoneList()->ReloadConfigure() result: %d"), bConfigZoneList);
+	BOOL bConfigVersion = GetConfigureVersion()->ReloadConfigure();
+	TRACE_INFODTL_1(GLOBAL_LOGGER, _T("[DownloadTrackerIpIni] GetConfigureVersion()->ReloadConfigure() result: %d"), bConfigVersion);
 	if( bSuccess && 
-		bCfgServerListReloaded && 
-		bCfgZoneListReloaded &&
-		bCfgVersionReloaded
+		bConfigServerList && 
+		bConfigZoneList &&
+		bConfigVersion
 		)
 	{
 		// Server assignment to Zone
 		ServerInfoList& serverInfoList = *GetConfigureServerList()->GetServerInfoList();
-		TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Server assignment to zone, server count=%d"), serverInfoList.size());
 		for( Index i = C_INDEX(0); i < serverInfoList.size(); ++i )
 		{
 			ServerInfo& info = serverInfoList[i];
@@ -457,27 +503,22 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 					zone->RegisterServer(&info);
 			}
 		}
-		TRACE_INFODTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Loading UI content (zones and recomm lists)"));
 		GetUIManagerZoneList()->LoadContent(GetConfigureZoneList()->GetZoneMap());
 		GetUIManagerRecommList()->LoadContent(GetConfigureServerList(), GetConfigureZoneList());
 
 		// load default zone server list
 		UInt32 zoneid = 1;
-		Zone* pSelectedZone = GetConfigureZoneList()->GetZone(zoneid);
-		TRACE_INFODTL_2(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Setting selected zone, zoneid=%d, zone_ptr=%p"), zoneid, pSelectedZone);
-		SetSelectedZone(*pSelectedZone);
+		SetSelectedZone(*GetConfigureZoneList()->GetZone(zoneid));
 		if( GetSelectedZone() )
 		{
 			ServerInfoList zoneSrvList;
 			zoneSrvList.clear();
 			GetSelectedZone()->GetServerList(zoneSrvList);
-			TRACE_INFODTL_1(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Loading server list for zone, count=%d"), zoneSrvList.size());
 			GetUIManagerServerList()->LoadContent(&zoneSrvList);
 			// 2. jump to selected zone
 		}
 		SetPatchCurrentVersion(GetPatchCurrentVersion());
 
-		TRACE_INFODTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Configuration loaded successfully, setting status to FREENAVIGATE"));
 		SetCurStatus(PATCHER_FREENAVIGATE);
 		m_curMainDlg->m_startGame.UnlockStatus();;
 		m_curMainDlg->m_startGame.RedrawWindow();
@@ -486,8 +527,6 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 	}
 	else
 	{
-		TRACE_ERRORDTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: FAILED - Configuration reload failed or download failed"));
-		TRACE_ERRORDTL_3(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Details - bSuccess=%d, ServerListReload=%d, ZoneListReload=%d"), bSuccess, bCfgServerListReloaded, bCfgZoneListReloaded);
 		GetMainDialog()->MessageBox(
 			GetStringTable()->Get(_T("MSG_TRACKER_DOWNLOAD_FAILED")).c_str(),
 			GetStringTable()->Get(_T("ERR_GENERAL")).c_str()
@@ -496,9 +535,7 @@ BOOL CQGLPatcherApp::DownloadTrackerIpIni()
 		return FALSE;
 	}
 	
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("DownloadTrackerIpIni: Setting InitTrackerLoaded flag and returning TRUE"));
 	SetInitTrackerLoaded();
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("CQGLPatcherApp::DownloadTrackerIpIni() EXIT SUCCESS"));
 	return TRUE;
 }
 
@@ -1552,10 +1589,6 @@ void CQGLPatcherApp::InitLogger()
 
 	// set object manager logger
 	Reuben::Simulation::SetObjectLogger(gGlobalLogger);
-	
-	// Write first log message to verify logger is initialized
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("========== QGLPatcher Started =========="));
-	TRACE_INFODTL(GLOBAL_LOGGER, _T("Logger initialization successful"));
 }
 
 void CQGLPatcherApp::CloseLogger()
@@ -1740,19 +1773,15 @@ BOOL CQGLPatcherApp::CreateFolder(LPCTSTR szFolder) // Copy from Unzipper.cpp
 		return ((dwAttrib & FILE_ATTRIBUTE_DIRECTORY) == FILE_ATTRIBUTE_DIRECTORY);
 
 	// recursively create from the top down
-	TCHAR* szPath = _tcsdup(szFolder);
-	String abc = szPath;
-	free(szPath);
-	abc.Replace(_T("/"), _T("\\"));
-	int pos = (int)abc.find_last_of(_T("\\"));
-
-	if (pos != String::npos)
+	String szPath = szFolder;
+	szPath.Replace(_T("/"), _T("\\"));
+	int lastSlash = szPath.ReverseFind(_T('\\'));
+	if (lastSlash != -1)
 	{
 		// The parent is a dir, not a drive
-		abc = abc.substr(0, pos);
-			
+		String parentPath = szPath.Left(lastSlash);
 		// if can't create parent
-		if (!CreateFolder(abc.c_str()))
+		if (!CreateFolder(parentPath.c_str()))
 		{
 			return FALSE;
 		}

@@ -1461,8 +1461,7 @@ VOID CQGLPatcherDlg::SelectServerAction(UInt serverNo)
 		UInt32 counter = 0;
 		if( zoneIdx < zonemap.size() )
 		{
-			ZoneMap::iterator itr = zonemap.begin();
-			for( ; counter < zoneIdx; ++itr, ++counter );
+			for( ZoneMap::iterator itr = zonemap.begin(); counter < zoneIdx; ++itr, ++counter );
 			Zone& zone = itr->second;
 			theApp.SetSelectedZone(zone);
 			if( theApp.GetSelectedZone() )
