@@ -65,6 +65,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>winmm.lib;ReubenUD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OutputFile>../../../Bin/GDFMergerUD.EXE</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>..\..\..\Bin\GDFMergerUD.pdb</ProgramDatabaseFile>
