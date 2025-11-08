@@ -88,7 +88,7 @@
       <AdditionalOptions>/EHa /FS %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>../GDFMerger;../Common;..;../../../../version_official/Library/Reuben/Include;../../../../3rd;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;REUBEN_LIB;REUBEN_PUBLISH;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;REUBEN_LIB;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling />
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -98,7 +98,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>winmm.lib;ReubenPU.lib;msvcrt.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;ReubenPU.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../../Bin/GDFMergerU.EXE</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>..\..\..\Bin\GDFMergerU.pdb</ProgramDatabaseFile>
@@ -133,6 +133,7 @@
     <ClCompile Include="..\GDFPackager\GDFManager.cpp" />
     <ClCompile Include="..\GDFPackager\GDFPackageMaker.cpp" />
     <ClCompile Include="..\GDFPackager\GDFStream.cpp" />
+    <ClCompile Include="..\GDFPackager\GDFPackager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Common\common.h" />
@@ -147,6 +148,8 @@
     <ClInclude Include="..\GDFPackager\GDFFile.h" />
     <ClInclude Include="..\GDFPackager\GDFManager.h" />
     <ClInclude Include="..\GDFPackager\GDFPackageMaker.h" />
+    <ClInclude Include="..\GDFPackager\GDFStream.h" />
+    <ClInclude Include="..\GDFPackager\GDFStreamData.h" />
     <ClInclude Include="..\GDFPackager\GDFStream.h" />
     <ClInclude Include="..\GDFPackager\GDFStreamData.h" />
   </ItemGroup>

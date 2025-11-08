@@ -2,6 +2,8 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
 
+#define _STRSAFE_H_INCLUDED_  // Prevent DX9 strsafe.h from redefining wchar_t
+
 #ifndef REUBEN_LIB
 #define REUBEN_LIB
 #endif

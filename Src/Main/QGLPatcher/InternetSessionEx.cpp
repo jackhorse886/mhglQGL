@@ -1,6 +1,11 @@
 #include "stdafx.h"
 #include "InternetSessionEx.h"
 
+// Ensure WMU_SESSIONUPDATE is defined
+#ifndef WMU_SESSIONUPDATE
+#define WMU_SESSIONUPDATE (WM_USER + 1)
+#endif
+
 // CInternetSessionEx
 
 CInternetSessionEx::CInternetSessionEx(LPCTSTR pstrAgent /*= NULL*/,

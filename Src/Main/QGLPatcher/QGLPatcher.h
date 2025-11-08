@@ -1,13 +1,13 @@
-// QGLPatcher.h : PROJECT_NAME ���ε{�����D�n���Y��
+﻿// QGLPatcher.h : PROJECT_NAME 锟斤拷锟轿祘锟斤拷锟斤拷锟紻锟絥锟斤拷锟結锟斤拷
 //
 
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error �b�� PCH �]�t���ɮ׫e���]�t 'stdafx.h'
+	#error 锟絙锟斤拷 PCH 锟絔锟絫锟斤拷锟缴玡锟斤拷锟絔锟絫 'stdafx.h'
 #endif
 
-#include "resource.h"		// �D�n�Ÿ�
+#include "resource.h"		// 锟紻锟絥锟脚革拷
 #include "common.h"
 #include "Configure.h"
 #include "ConfigureApp.h"
@@ -26,7 +26,7 @@
 
 
 // CQGLPatcherApp:
-// �аѾ\��@�����O�� QGLPatcher.cpp
+// 锟叫把綷锟斤拷@锟斤拷锟斤拷锟絆锟斤拷 QGLPatcher.cpp
 //
 
 #define CONFIGURATION_GAME_INI_FILE				_T("Config\\ipconfig.ini")
@@ -50,12 +50,12 @@
 
 #define MASTER_HTTP_PORT						80
 #define MASTER_FTP_PORT							21
-#define FTP_USERNAME							_T("qglclient")
-#define FTP_PASSWORD							_T("qglpassword")
+#define FTP_USERNAME							_T("admin")
+#define FTP_PASSWORD							_T("xyc1230546")
 
 // DEFAULT: http://192.100.100.228:80/QGLClient/trackerip.txt
 #define DEFAULT_TRACKER_FILE					_T("trackerip.txt")
-#define DEFAULT_TRACKER_IP						_T("222.73.109.184")
+#define DEFAULT_TRACKER_IP						_T("localhost")
 #define DEFAULT_TRACKER_PATH					_T("QGLClient")
 #define DEFAULT_TRACKER_PORT					80
 #define DEFAULT_TRACKER_TYPE					1
@@ -187,11 +187,11 @@ public:
 	CQGLPatcherApp();
 	~CQGLPatcherApp();
 
-// �мg
+// 锟叫糶
 	public:
 	virtual BOOL InitInstance();
 
-// �{���X��@
+// 锟絳锟斤拷锟絏锟斤拷@
 
 	DECLARE_MESSAGE_MAP()
 

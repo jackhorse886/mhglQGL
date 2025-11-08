@@ -68,7 +68,7 @@
     <Link>
       <AdditionalDependencies>winmm.lib;ReubenUD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\..\Bin\UpdatePatchUD.exe</OutputFile>
-      <AdditionalLibraryDirectories>../QGLPatcher/zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;../QGLPatcher/zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>../../../Bin/UpdatePatchUD.pdb</ProgramDatabaseFile>
@@ -94,7 +94,7 @@
       <AdditionalOptions>/EHa /FS %(AdditionalOptions)</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
       <AdditionalIncludeDirectories>../UpdatePatch;../Common;..;../QGLPatcher;../../../../version_official/Library/Reuben/Include;../../../../3rd;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;REUBEN_LIB;REUBEN_PUBLISH;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;REUBEN_LIB;WINVER=0x0501;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -105,9 +105,9 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;ReubenPU.lib;msvcrt.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>..\..\..\Bin\UpdatePatchU.exe</OutputFile>
-      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;../QGLPatcher/zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>winmm.lib;ReubenPU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\.\Bin\UpdatePatchU.exe</OutputFile>
+      <AdditionalLibraryDirectories>../../../../version_official/Library/Reuben/Lib;$(VCINSTALLDIR)lib;../QGLPatcher/zlib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>../../../Bin/UpdatePatchU.pdb</ProgramDatabaseFile>
       <GenerateMapFile>true</GenerateMapFile>

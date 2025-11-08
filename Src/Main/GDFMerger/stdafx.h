@@ -1,5 +1,7 @@
 #pragma once
 
+#define _STRSAFE_H_INCLUDED_  // Prevent DX9 strsafe.h from redefining wchar_t
+
 #ifndef UNICODE
 #define UNICODE
 #endif

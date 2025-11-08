@@ -42,12 +42,12 @@
     <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>Debug\</OutDir>
+    <OutDir>..\..\..\Bin\</OutDir>
     <IntDir>..\..\..\OBJ\QGLPatcher\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>Release\</OutDir>
+    <OutDir>..\..\..\Bin\</OutDir>
     <IntDir>..\..\..\OBJ\QGLPatcher\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
